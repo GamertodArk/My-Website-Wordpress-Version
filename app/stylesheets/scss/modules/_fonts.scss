@@ -1,0 +1,8 @@
+
+// Genericons font
+@font-face {
+	font-family: 'Genericons';
+	src: 
+	url(#{$genericons_font_url}genericons-regular-webfont.woff) format('woff'),
+	url(#{$genericons_font_url}genericons-regular-webfont.eot) format('truetype');
+}

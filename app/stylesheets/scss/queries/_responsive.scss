@@ -1,0 +1,41 @@
+
+@media screen and (max-width: 800px) {
+	main {
+		.section {
+			padding: 1em;
+
+			.section-content {
+				width: 100%;
+			}
+		}
+	}
+
+	.form_modal {	
+		.modal_btn {
+			right: 20px;
+			bottom: 20px;
+			background-color: $modal_bg * 0.7; 
+		}
+	}
+
+	footer {
+		p {
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.form_modal  {	
+		.modal_form {
+			width: 80%;
+			right: 10%;
+
+			form {
+				textarea {
+					height: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family:Roboto, Helvetica, Arial, sans-serif;
+$base-font-weight: $regular;
+// $base-font-size: 13px;
+$base-line-height: 1.4;
+$base-h2-size: 27pt;
+
+// Routes
+$img_url: '../../img/';
+$genericons_font_url: '../../fonts/genericons/';
+
+// Icons
+$base_icons_size: 13pt;
+$model_icon_size: 25pt;
+
+// Fixed Font
+// $fixed-font-family: monospace;
+// $fixed-font-size: 85%;
+// $fixed-line-height: $base-line-height;
+
+// Headings
+// $header-font-weight: $bold;
+
+
+// include all the modules
+@import '../modules/all';

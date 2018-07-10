@@ -1,0 +1,51 @@
+
+@mixin center-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin footer-icons-transition {
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+	transition-property: width, height, background-color;
+
+	-o-transition-delay: 0.1s;	
+	-o-transition-duration: 0.2s;	
+	-o-transition-timing-function: ease;	
+	-o-transition-property: width, height, background-color;	
+
+	-moz-transition-delay: 0.1s;	
+	-moz-transition-duration: 0.2s;	
+	-moz-transition-timing-function: ease;	
+	-moz-transition-property: width, height, background-color;	
+
+	-webkit-transition-delay: 0.1s;	
+	-webkit-transition-duration: 0.2s;	
+	-webkit-transition-timing-function: ease;	
+	-webkit-transition-property: width, height, background-color;	
+
+}
+
+@mixin transition ($delay, $duration, $timing-function, $property) {
+    transition-delay: $delay;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+	transition-property: $property;
+
+	-o-transition-delay: $delay;	
+	-o-transition-duration: $duration;	
+	-o-transition-timing-function: $timing-function;	
+	-o-transition-property: $property;	
+
+	-moz-transition-delay: $delay;	
+	-moz-transition-duration: $duration;	
+	-moz-transition-timing-function: $timing-function;	
+	-moz-transition-property: $property;	
+
+	-webkit-transition-delay: $delay;	
+	-webkit-transition-duration: $duration;	
+	-webkit-transition-timing-function: $timing-function;	
+	-webkit-transition-property: $property;		
+}
