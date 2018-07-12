@@ -7,8 +7,6 @@
 	<title>Elvis Garcia - Web Developer</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-	<link rel="stylesheet" href="<?php echo CSS_URL ?>main_styles.css"> 
-
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo FAVICON_URL ?>apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo FAVICON_URL ?>apple-icon-60x60.png">
@@ -33,10 +31,29 @@
 <body>
 	<header>
 		<div id="lg_wrap" class="lg_wrap">
-			<img src="<?php echo IMG_URL ?>us-flag.png" alt="English">
-			<a class="lang_btn" href="?lg=es">
-				<img src="<?php echo IMG_URL ?>spain-flag.png" alt="Español">
-			</a>
+			<?php  
+				$es_fl = '<img src="'. IMG_URL .'spain-flag.png" alt="Español">';
+				$us_fl = '<img src="'. IMG_URL .'us-flag.png" alt="English">';
+
+				if (isset($_GET['lg'])) {
+					if (strtolower($_GET['lg']) == 'es') {
+
+						// We are in the spanish version
+						echo $es_fl;
+						echo '<a href="?lg=en" class="lang_btn">'. $us_fl .'</a>';
+
+					}elseif (strtolower($_GET['lg']) == 'en') {
+						
+						// We are in the english version
+						echo $us_fl;
+						echo '<a class="lang_btn" href="?lg=es">'. $es_fl .'</a>'; 
+
+					}
+				}else {
+					echo $es_fl;
+					echo '<a href="?lg=en" class="lang_btn">'. $us_fl .'</a>';
+				}
+			?>
 		</div>
 		<div class="header-overlay"></div>
 		<div class="header_data">

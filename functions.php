@@ -1,6 +1,5 @@
 <?php  
-	// Core 
-	// include 'core/core.php';
 
+	include 'core/includes/enqueue_scripts.php'
 	
 ?>

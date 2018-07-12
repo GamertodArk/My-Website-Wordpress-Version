@@ -1,8 +1,35 @@
 	<div class="form_modal">
+
+		<?php  
+			if (isset($_GET['lg'])) {
+				if (strtolower($_GET['lg']) == 'es') {
+					
+					// We are is the Spanish Version
+					$tl = 'Envíame un mensaje';
+					$msg_1 = 'Tienes que llenar todos los campos';
+					$msg_2 = 'Mensaje Enviado!';
+
+				}elseif (strtolower($_GET['lg']) == 'en') {
+
+					// We are in the English Version
+					$tl = 'Send me a message';
+					$msg_1 = 'All the fields must be filled';
+					$msg_2 = '¡Message Sent!';
+
+				}
+			}else {
+
+				// The defualt language is Spanish
+				$tl = 'Envíame un mensaje';
+				$msg_1 = 'Tienes que llenar todos los campos';
+				$msg_2 = 'Mensaje Enviado!';
+			}
+		?>
+
 		<div id="modal_form" class="modal_form">
-			<h2>Send me a message</h2>
-			<p class="hide" id="error_msg">All the fields must be filled</p>
-			<p class="hide" id="msg_sent">¡Message Sent!</p>
+			<h2><?php echo $tl; ?></h2>
+			<p class="hide" id="error_msg"><?php echo $msg_1; ?></p>
+			<p class="hide" id="msg_sent"><?php echo $msg_2; ?></p>
 
 			<form action="">
 				<input type="email" name="email" id="email_input" placeholder="Email">
@@ -35,8 +62,8 @@
 
 
 <?php wp_footer(); ?>
-<script src="<?php echo JS_URL ?>main.js"></script>
-<script src="<?php echo JS_URL ?>send_email_ajax.js"></script>
+<!-- <script src="<?php echo JS_URL ?>main.js"></script> -->
+<!-- <script src="<?php echo JS_URL ?>send_email_ajax.js"></script> -->
 
 </body>
 </html>
