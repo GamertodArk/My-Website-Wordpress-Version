@@ -1,13 +1,9 @@
 <?php  
-	// Composer autoload
-	// include './vendor/autoload.php';
 
 	// Server constants
 	define('TEMP_URL', dirname(__DIR__) . '\app\templates\\');
-	// define('INC_URL', '/core/includes/');
 
 	// Client constants
-	// define('CSS_URL', '/app/stylesheets/css/');
 	define('CSS_URL', get_template_directory_uri() . '/app/stylesheets/css/');
 	define('JS_URL', get_template_directory_uri() . '/app/scripts/');
 	define('IMG_URL', get_template_directory_uri() . '/app/img/');

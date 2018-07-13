@@ -62,8 +62,6 @@
 
 
 <?php wp_footer(); ?>
-<!-- <script src="<?php echo JS_URL ?>main.js"></script> -->
-<!-- <script src="<?php echo JS_URL ?>send_email_ajax.js"></script> -->
 
 </body>
 </html>
