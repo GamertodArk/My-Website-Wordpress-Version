@@ -14,4 +14,18 @@
 		}
 
 	}
+
+	class wpga_text_input_control extends WP_Customize_Control
+	{
+		
+		public $type = 'input';
+
+		public function render_content()
+		{
+			echo '<label for="'. $this->id .'"><strong>'. esc_html($this->label) .'</strong></label>';
+			echo '<input id="'. esc_attr($this->id) .'" value="'. esc_attr($this->value()) .'" type="text"';
+				$this->link();
+			echo '>';	
+		}
+	}
 ?>

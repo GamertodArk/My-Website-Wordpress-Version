@@ -58,7 +58,13 @@
 		<div class="header-overlay"></div>
 		<div class="header_data">
 			<img src="<?php echo IMG_URL ?>face.jpg" alt="Elvis Garcia" title="Elvis Garcia - desarrollador web">
-			<h2>Elvis Garcia</h2>
-			<p>Full Stack - Web Developer</p>
+			<!-- <h2>Elvis Garcia</h2> -->
+			<!-- <p>Full Stack - Web Developer</p> -->
+			<h2>
+				<?php echo get_theme_mod('wpga_gen_text_name'); ?>
+			</h2>
+			<p>
+				<?php echo get_theme_mod('wpga_gen_text_description'); ?>
+			</p>
 		</div>
 	</header>

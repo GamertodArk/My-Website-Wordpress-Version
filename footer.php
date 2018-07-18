@@ -57,7 +57,10 @@
 			<a class="github" href="https://github.com/GamertodArk">1</a>
 		</span>
 	</div>
-	<p><strong>Elvis Garcia</strong> - Desarrollador web</p>
+	<!-- <p><strong>Elvis Garcia</strong> - Desarrollador web</p> -->
+	<p>
+		<?php echo get_theme_mod('wpga_gen_text_footer') ?>
+	</p>
 </footer>
 
 
