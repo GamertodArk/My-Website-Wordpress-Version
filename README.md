@@ -20,6 +20,8 @@ And then upload the new theme you just downloaded and you should be ready to go
 ### Using Git
 
 To install this theme usin get, first run this line
-> git clone git@github.com:GamertodArk/My-Website-Wordpress-Version.git
+```bash 
+git clone git@github.com:GamertodArk/My-Website-Wordpress-Version.git
+```
 
 Then, insert that folder into a zip file and upload that file as described above
