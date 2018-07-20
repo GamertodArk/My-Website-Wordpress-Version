@@ -6,7 +6,6 @@ And something I would like to point, **This is not a full Wordpress theme**. Wha
 I Built this Theme to be as customizable as It can be. Things like the color Schema, The page's text, the Website name, the description are fully customizable usin the WordPress' Customizer.
 
 ## Instalation
-___
 
 ### Recomended Version
 We are still talking about a WordPress and as I doub that you are going to find this theme somewhere else, the easiest way to get this theme, is to download this repository as a zip file. Go to
