@@ -6,67 +6,102 @@
 
 
 		/*----- Sections -------*/
-		$wp_customize->add_section('wpga_esp_texts' ,array(
+		$sections[] = array(
+			'id' => 'wpga_esp_texts',
 			'title' => 'Textos en español'
-		));
+		);
 
-		$wp_customize->add_section('wpga_eng_texts',array(
-			'title' => 'English Texts'
-		));
+		$sections[] = array(
+			'id' => 'wpga_eng_texts',
+			'title' => 'English Texts'			
+		);
 
-		$wp_customize->add_section('wpga_gen_texts', array(
-			'title' => 'Textos Generales'
-		));
+		$sections[] = array(
+			'id' => 'wpga_gen_texts',
+			'title' => 'Textos Generales'			
+		);
 
-		$wp_customize->add_section('wpga_colors_schema', array(
-			'title' => 'Color Schema'
-		));
+		$sections[] = array(
+			'id' => 'wpga_colors_schema',
+			'title' => 'Color Schema'			
+		);
+
+
+		foreach ($sections as $section) {
+			$wp_customize->add_section($section['id'], array(
+				'title' => $section['title']
+			));
+		}
 
 		/*------- Settings --------*/
-		$wp_customize->add_setting('wpga_esp_text_1', array(
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_esp_text_1',
 			'default' => 'Hola!, soy Elvis Garcia'
-		));
+		);
 
-		$wp_customize->add_setting('wpga_esp_text_2', array(
-			'default' => 'Soy desarrollador web'
-		));
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_esp_text_2',
+			'default' => 'Soy desarrollador web'			
+		);
 
-		$wp_customize->add_setting('wpga_eng_text_1', array(
-			'default' => 'Hi!, I\'m Elvis Garcia'
-		));
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_eng_text_1',
+			'default' => 'Hi!, I\'m Elvis Garcia'			
+		);
 
-		$wp_customize->add_setting('wpga_eng_text_2', array(
-			'default' => 'I\'m a Web Developer'
-		));
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_eng_text_2',
+			'default' => 'I\'m a Web Developer'			
+		);
 
-		$wp_customize->add_setting('wpga_gen_text_name', array(
-			'default' => 'Elvis Garcia'
-		));	
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_gen_text_name',
+			'default' => 'Elvis Garcia'			
+		);
 
-		$wp_customize->add_setting('wpga_gen_text_description', array(
-			'default' => 'Full Stack - Web Developer'
-		));
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_gen_text_description',
+			'default' => 'Full Stack - Web Developer'			
+		);
 
-		$wp_customize->add_setting('wpga_gen_text_footer', array(
-			'default' => 'Desarrollador Web'
-		));
+		$settings[] = array(
+			'type' => null,
+			'id' => 'wpga_gen_text_footer',
+			'default' => 'Desarrollador Web'			
+		);
 
 
-		$wp_customize->add_setting('wpga_section_1_bg', array(
-			'default' => '#ffffff',
-			'type' => 'option'
-		));
+		$settings[] = array(
+			'type' => 'option',
+			'id' => 'wpga_section_1_bg',
+			'default' => '#ffffff'			
+		);
 
-		$wp_customize->add_setting('wpga_section_2_bg', array(
-			'default' => '#444444',
-			'type' => 'option'
-		));
+		$settings[] = array(
+			'type' => 'option',
+			'id' => 'wpga_section_2_bg',
+			'default' => '#444444'			
+		);
 
-		$wp_customize->add_setting('wpga_footer_bg', array(
-			'default' => '#222222',
-			'type' => 'option'
-		));
+		$settings[] = array(
+			'type' => 'option',
+			'id' => 'wpga_footer_bg',
+			'default' => '#222222'			
+		);
 
+
+		foreach ($settings as $setting) {
+			$wp_customize->add_setting($setting['id'], array(
+				'default' => $setting['default'],
+				'type' => $setting['type']
+			));
+		}
 
 		/*---------- Controls ----------*/
 		$wp_customize->add_control(new wpga_customize_textarea_control(
