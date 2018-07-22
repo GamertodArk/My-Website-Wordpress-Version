@@ -104,106 +104,106 @@
 		}
 
 		/*---------- Controls ----------*/
-		$wp_customize->add_control(new wpga_customize_textarea_control(
-			$wp_customize,
-			'wpga_esp_text_1',
-			array(
-				'label' => '¿Quien Soy?',
-				'section' => 'wpga_esp_texts',
-				'settings' => 'wpga_esp_text_1'
-			)
-		));
+		$textareas[] = array(
+			'label' => '¿Quien Soy?',
+			'setting' => 'wpga_esp_text_1',
+			'section' => 'wpga_esp_texts'
+		);
 
-		$wp_customize->add_control(new wpga_customize_textarea_control(
-			$wp_customize,
-			'wpga_esp_text_2',
-			array(
-				'label' => '¿Que puedo hacer?',
-				'section' => 'wpga_esp_texts',
-				'settings' => 'wpga_esp_text_2'
-			)
-		));
+		$textareas[] = array(
+			'label' => '¿Que puedo hacer?',
+			'setting' => 'wpga_esp_text_2',
+			'section' => 'wpga_esp_texts'
 
-		$wp_customize->add_control(new wpga_customize_textarea_control(
-			$wp_customize,
-			'wpga_eng_text_1',
-			array(
-				'label' => 'Who am I?',
-				'section' => 'wpga_eng_texts',
-				'settings' => 'wpga_eng_text_1'
-			)
-		));
+		);
 
-		$wp_customize->add_control(new wpga_customize_textarea_control(
-			$wp_customize,
-			'wpga_eng_text_2',
-			array(
-				'label' => 'What can I do?',
-				'section' => 'wpga_eng_texts',
-				'settings' => 'wpga_eng_text_2'
-			)
-		));
+		$textareas[] = array(
+			'label' => 'Who am I?',
+			'setting' => 'wpga_eng_text_1',
+			'section' => 'wpga_eng_texts'
+		);
 
-		$wp_customize->add_control(new wpga_text_input_control(
-			$wp_customize,
-			'wpga_gen_text_name',
-			array(
-				'label' => 'Tu nombre',
-				'section' => 'wpga_gen_texts',
-				'settings' => 'wpga_gen_text_name'
-			)
-		));
+		$textareas[] = array(
+			'label' => 'What can I do?',
+			'setting' => 'wpga_eng_text_2',
+			'section' => 'wpga_eng_texts'
 
-		$wp_customize->add_control(new wpga_text_input_control(
-			$wp_customize,
-			'wpga_gen_text_description',
-			array(
-				'label' => 'Descripción',
-				'section' => 'wpga_gen_texts',
-				'settings' => 'wpga_gen_text_description'
-			)
-		));
+		);
 
-		$wp_customize->add_control(new wpga_text_input_control(
-			$wp_customize,
-			'wpga_gen_text_footer',
-			array(
-				'label' => 'Texto del footer',
-				'section' => 'wpga_gen_texts',
-				'settings' => 'wpga_gen_text_footer'
-			)
-		));
+		foreach ($textareas as $textarea) {
+
+			$wp_customize->add_control(new wpga_customize_textarea_control(
+				$wp_customize,
+				$textarea['setting'],
+				array(
+					'label' => $textarea['label'],
+					'section' => $textarea['section'],
+					'settings' => $textarea['setting']
+				)
+			));				
+
+		}
+
+		// Input Control
+		$inputs[] = array(
+			'setting' => 'wpga_gen_text_name',
+			'label' => 'Tu nombre'
+		);
+
+		$inputs[] = array(
+			'setting' => 'wpga_gen_text_description',
+			'label' => 'Descripción'			
+		);
+
+		$inputs[] = array(
+			'setting' => 'wpga_gen_text_footer',
+			'label' => 'Texto del footer'			
+		);
+
+		foreach ($inputs as $input) {
+
+			$wp_customize->add_control(new wpga_text_input_control(
+				$wp_customize,
+				$input['setting'],
+				array(
+					'label' => $input['label'],
+					'section' => 'wpga_gen_texts',
+					'settings' => $input['setting']
+				)
+			));			
+
+		}
 
 
-		$wp_customize->add_control(new WP_Customize_Color_Control(
-			$wp_customize,
-			'wpga_section_1_bg',
-			array(
-				'label' => 'Fondo de la section 1',
-				'section' => 'wpga_colors_schema',
-				'settings' => 'wpga_section_1_bg'
-			)
-		));		
+		// Color Schema
+		$colors[] = array(
+			'setting' => 'wpga_section_1_bg',
+			'label' => 'Fondo de la section 1',			
+		); 
 
-		$wp_customize->add_control(new WP_Customize_Color_Control(
-			$wp_customize,
-			'wpga_section_2_bg',
-			array(
-				'label' => 'Fondo de la section 2',
-				'section' => 'wpga_colors_schema',
-				'settings' => 'wpga_section_2_bg'
-			)
-		));		
+		$colors[] = array(
+			'setting' => 'wpga_section_2_bg',
+			'label' => 'Fondo de la section 2',			
+		); 
 
-		$wp_customize->add_control(new WP_Customize_Color_Control(
-			$wp_customize,
-			'wpga_footer_bg',
-			array(
-				'label' => 'Fondo del Footer',
-				'section' => 'wpga_colors_schema',
-				'settings' => 'wpga_footer_bg'
-			)
-		));		
+		$colors[] = array(
+			'setting' => 'wpga_footer_bg',
+			'label' => 'Fondo del Footer',						
+		);
+
+		foreach ($colors as $color) {
+
+			$wp_customize->add_control(new WP_Customize_Color_Control(
+				$wp_customize,
+				$color['setting'],
+				array(
+					'label' => $color['label'],
+					'section' => 'wpga_colors_schema',
+					'settings' => $color['setting']
+				)
+			));						
+
+		}
 	}
 	add_action('customize_register', 'wpga_customizer_settings');
 
