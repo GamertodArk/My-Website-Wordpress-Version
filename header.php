@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta name="description" content="Freelance web developer, improve your business with an awesome web page">
-
 	<meta charset="UTF-8">
 	<title>Elvis Garcia - Web Developer</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
