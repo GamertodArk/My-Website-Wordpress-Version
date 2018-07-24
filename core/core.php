@@ -16,6 +16,4 @@
 	define('SMTP_SERVER_HOST', 'smtp.gmail.com');
 	define('SMTP_SERVER_USERNAME', 'gamertodark@gmail.com');
 
-	// Functions
-	// include 'core/functions/email_template.php';
 ?>
