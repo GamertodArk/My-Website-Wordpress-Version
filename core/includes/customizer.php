@@ -4,7 +4,6 @@
 		
 		include 'classes/customize_textarea_control.php';
 
-
 		/*----- Sections -------*/
 		$sections[] = array(
 			'id' => 'wpga_esp_texts',
@@ -173,7 +172,6 @@
 			));			
 
 		}
-
 
 		// Color Schema
 		$colors[] = array(
