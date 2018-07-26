@@ -140,7 +140,6 @@
 					'settings' => $textarea['setting']
 				)
 			));				
-
 		}
 
 		// Input Control
@@ -200,7 +199,6 @@
 					'settings' => $color['setting']
 				)
 			));						
-
 		}
 	}
 	add_action('customize_register', 'wpga_customizer_settings');
